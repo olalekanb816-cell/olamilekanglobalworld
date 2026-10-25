@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="OLAMILEKAN GLOBAL WORLD is a global online marketplace for technology products, supermarket goods, African products, and logistics services."
+      content="OLAMILEKAN GLOBAL WORLD is a premium marketplace and business platform for technology, electronics, African products, and global trade solutions."
     />
-    <title>OLAMILEKAN GLOBAL WORLD</title>
+    <title>OLAMILEKAN GLOBAL WORLD | One World. Your Vision.</title>
     <style>
       :root {
-        --bg: #0b1020;
-        --bg-soft: #121a2d;
-        --card: rgba(17, 24, 39, 0.86);
-        --primary: #22c55e;
-        --secondary: #38bdf8;
-        --accent: #f59e0b;
-        --text: #e5edf7;
-        --muted: #a8b4c7;
-        --border: rgba(148, 163, 184, 0.22);
-        --shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+        --bg: #0b0b0d;
+        --bg-soft: #141416;
+        --panel: #1a1a1d;
+        --panel-alt: rgba(255, 255, 255, 0.03);
+        --gold: #d4af37;
+        --gold-soft: #f3d77a;
+        --text: #f5f5f5;
+        --muted: #c7c4bf;
+        --border: rgba(212, 175, 55, 0.28);
+        --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        --success: #25d366;
       }
 
       * {
@@ -35,14 +36,14 @@
         font-family: Arial, Helvetica, sans-serif;
         color: var(--text);
         background:
-          radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 25%),
-          radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.15), transparent 25%),
+          radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 25%),
+          radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.08), transparent 20%),
           var(--bg);
         line-height: 1.6;
       }
 
       a {
-        color: inherit;
+        color: var(--text);
         text-decoration: none;
       }
 
@@ -59,9 +60,9 @@
       header {
         position: sticky;
         top: 0;
-        z-index: 10;
+        z-index: 50;
         backdrop-filter: blur(14px);
-        background: rgba(11, 16, 32, 0.75);
+        background: rgba(11, 11, 13, 0.82);
         border-bottom: 1px solid var(--border);
       }
 
@@ -70,48 +71,80 @@
         align-items: center;
         justify-content: space-between;
         min-height: 76px;
+        gap: 1rem;
       }
 
       .brand {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 0.8rem;
         font-weight: 700;
         letter-spacing: 0.04em;
       }
 
       .brand-mark {
-        width: 38px;
-        height: 38px;
-        border-radius: 12px;
+        width: 40px;
+        height: 40px;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: #03130b;
-        font-weight: 800;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+        color: #090909;
+        font-weight: 900;
       }
 
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1.6rem;
         color: var(--muted);
       }
 
-      .nav-links a:hover {
-        color: var(--text);
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--gold-soft);
+      }
+
+      .nav-cta,
+      .button,
+      .whatsapp-float {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .nav-cta,
+      .button.primary {
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+        color: #0d0d0d;
+        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
       }
 
       .nav-cta {
-        padding: 0.75rem 1.2rem;
-        border-radius: 999px;
-        background: linear-gradient(135deg, var(--primary), #1fbf71);
-        color: #061b12;
-        font-weight: 700;
+        padding: 0.8rem 1.2rem;
+      }
+
+      .button {
+        padding: 1rem 1.5rem;
+      }
+
+      .button:hover,
+      .nav-cta:hover,
+      .whatsapp-float:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.secondary {
+        background: transparent;
+        border: 1px solid var(--border);
+        color: var(--text);
       }
 
       .hero {
-        padding: 5rem 0 4rem;
+        padding: 5rem 0 3rem;
       }
 
       .hero-grid {
@@ -125,25 +158,26 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        background: rgba(56, 189, 248, 0.08);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        color: #bfeaff;
-        padding: 0.5rem 0.8rem;
+        color: var(--gold-soft);
+        border: 1px solid var(--border);
+        background: rgba(212, 175, 55, 0.06);
         border-radius: 999px;
-        font-size: 0.82rem;
-        letter-spacing: 0.05em;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
       }
 
       h1 {
-        font-size: clamp(2.5rem, 5vw, 5rem);
+        font-size: clamp(2.7rem, 5vw, 5rem);
         line-height: 1.05;
         margin: 1rem 0;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.05em;
       }
 
       .highlight {
-        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        background: linear-gradient(90deg, var(--gold-soft), var(--gold));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -162,31 +196,6 @@
         margin-top: 2rem;
       }
 
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.9rem 1.5rem;
-        border-radius: 12px;
-        font-weight: 700;
-        transition: transform 0.2s ease;
-      }
-
-      .button:hover {
-        transform: translateY(-1px);
-      }
-
-      .button.primary {
-        background: linear-gradient(135deg, var(--primary), #1fc576);
-        color: #03130b;
-      }
-
-      .button.secondary {
-        border: 1px solid var(--border);
-        background: rgba(15, 23, 42, 0.5);
-        color: var(--text);
-      }
-
       .stats {
         display: grid;
         grid-template-columns: repeat(3, minmax(120px, 1fr));
@@ -195,16 +204,17 @@
       }
 
       .stat {
-        background: rgba(17, 24, 39, 0.75);
+        background: rgba(255, 255, 255, 0.02);
         border: 1px solid var(--border);
-        border-radius: 16px;
+        border-radius: 18px;
         padding: 1rem;
       }
 
       .stat strong {
         display: block;
-        font-size: 1.5rem;
-        margin-bottom: 0.15rem;
+        font-size: 1.55rem;
+        color: var(--gold-soft);
+        margin-bottom: 0.2rem;
       }
 
       .stat span {
@@ -215,26 +225,26 @@
       .hero-card {
         position: relative;
         border-radius: 28px;
-        background: linear-gradient(135deg, rgba(18, 26, 45, 0.95), rgba(15, 23, 42, 0.9));
+        background: linear-gradient(135deg, rgba(26, 26, 29, 0.96), rgba(15, 15, 17, 0.92));
         border: 1px solid var(--border);
         box-shadow: var(--shadow);
         overflow: hidden;
       }
 
       .hero-visual {
-        min-height: 520px;
+        min-height: 500px;
         padding: 1.2rem;
         display: flex;
         align-items: end;
         justify-content: center;
         background:
-          linear-gradient(160deg, rgba(34, 197, 94, 0.18), rgba(56, 189, 248, 0.08)),
+          linear-gradient(160deg, rgba(212, 175, 55, 0.16), rgba(0, 0, 0, 0.1)),
           url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
       }
 
       .product-window {
         width: min(100%, 400px);
-        background: rgba(6, 11, 19, 0.7);
+        background: rgba(8, 8, 10, 0.72);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 20px;
         padding: 1.2rem;
@@ -245,7 +255,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1rem;
         color: var(--muted);
         font-size: 0.82rem;
       }
@@ -258,13 +268,13 @@
       .window-dots span {
         width: 10px;
         height: 10px;
-        border-radius: 50%;
         display: block;
+        border-radius: 50%;
       }
 
-      .window-dots span:nth-child(1) { background: #fb7185; }
-      .window-dots span:nth-child(2) { background: #fbbf24; }
-      .window-dots span:nth-child(3) { background: var(--primary); }
+      .window-dots span:nth-child(1) { background: #ff5f57; }
+      .window-dots span:nth-child(2) { background: #ffbd2f; }
+      .window-dots span:nth-child(3) { background: var(--gold); }
 
       .product-grid {
         display: grid;
@@ -273,14 +283,16 @@
       }
 
       .mini-card {
-        background: rgba(15, 23, 42, 0.9);
+        background: rgba(17, 17, 19, 0.85);
         border: 1px solid var(--border);
         border-radius: 16px;
         padding: 0.9rem 0.85rem;
       }
 
       .mini-card strong {
+        display: block;
         font-size: 1.25rem;
+        color: var(--gold-soft);
       }
 
       .mini-card span {
@@ -296,22 +308,24 @@
 
       .section-head {
         text-align: center;
-        max-width: 700px;
+        max-width: 720px;
         margin: 0 auto 2rem;
       }
 
       .section-head h2 {
+        margin-bottom: 0.5rem;
         font-size: clamp(2rem, 4vw, 3rem);
         letter-spacing: -0.04em;
-        margin-bottom: 0.5rem;
       }
 
       .section-head p {
         color: var(--muted);
+        margin: 0;
       }
 
       .features,
-      .categories {
+      .categories,
+      .services-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.3rem;
@@ -319,7 +333,7 @@
 
       .card {
         padding: 1.5rem;
-        background: rgba(17, 24, 39, 0.75);
+        background: rgba(255, 255, 255, 0.02);
         border: 1px solid var(--border);
         border-radius: 20px;
       }
@@ -327,11 +341,11 @@
       .icon {
         width: 52px;
         height: 52px;
-        border-radius: 14px;
         display: grid;
         place-items: center;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.08));
         margin-bottom: 0.9rem;
-        background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(56, 189, 248, 0.2));
         font-size: 1.5rem;
       }
 
@@ -347,14 +361,14 @@
 
       .cta-panel {
         margin-top: 2rem;
-        padding: 2rem;
-        border-radius: 24px;
-        border: 1px solid var(--border);
-        background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(56, 189, 248, 0.08));
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
+        padding: 2rem;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.09), rgba(255, 255, 255, 0.02));
       }
 
       .cta-panel h3 {
@@ -367,17 +381,55 @@
         color: var(--muted);
       }
 
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0 0;
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--muted);
+      }
+
+      .contact-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: 0 0 18px rgba(212, 175, 55, 0.8);
+      }
+
       footer {
         padding: 2rem 0 3rem;
+        border-top: 1px solid var(--border);
         color: var(--muted);
         text-align: center;
-        border-top: 1px solid var(--border);
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #18d26a, #25d366);
+        color: white;
+        box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+        font-size: 1.8rem;
+        z-index: 60;
       }
 
       @media (max-width: 880px) {
         .hero-grid,
         .features,
         .categories,
+        .services-grid,
         .cta-panel {
           grid-template-columns: 1fr;
           display: grid;
@@ -389,6 +441,10 @@
 
         .hero {
           padding-top: 3rem;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -403,12 +459,12 @@
 
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#categories">Categories</a>
           <a href="#services">Services</a>
+          <a href="#products">Products</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a class="nav-cta" href="#contact">Shop Now</a>
+        <a class="nav-cta" href="#contact">Get Started</a>
       </div>
     </header>
 
@@ -418,33 +474,32 @@
           <div>
             <div class="eyebrow">One World. Your Vision.</div>
             <h1>
-              Your gateway to
-              <span class="highlight">global shopping</span>
-              and trusted delivery.
+              Premium global commerce for
+              <span class="highlight">technology, trade, and lifestyle.</span>
             </h1>
             <p class="lead">
-              OLAMILEKAN GLOBAL WORLD connects shoppers to technology products,
-              supermarket essentials, authentic African goods, and efficient logistics
-              services designed to serve communities worldwide.
+              OLAMILEKAN GLOBAL WORLD connects customers and businesses to quality technology,
+              supermarket essentials, authentic African products, and reliable logistics services
+              across markets worldwide.
             </p>
 
             <div class="cta-row">
-              <a class="button primary" href="#categories">Explore Products</a>
+              <a class="button primary" href="#products">Explore Products</a>
               <a class="button secondary" href="#services">Our Services</a>
             </div>
 
-            <div class="stats" aria-label="Key business stats">
+            <div class="stats" aria-label="Business metrics">
               <div class="stat">
-                <strong>100%</strong>
-                <span>Customer-focused</span>
+                <strong>Global</strong>
+                <span>Market access</span>
               </div>
               <div class="stat">
                 <strong>24/7</strong>
-                <span>Global support</span>
+                <span>Customer support</span>
               </div>
               <div class="stat">
-                <strong>Fast</strong>
-                <span>Logistics network</span>
+                <strong>Trusted</strong>
+                <span>Delivery network</span>
               </div>
             </div>
           </div>
@@ -464,11 +519,11 @@
                 <div class="product-grid">
                   <div class="mini-card">
                     <strong>Tech</strong>
-                    <span>Devices</span>
+                    <span>Electronics</span>
                   </div>
                   <div class="mini-card">
-                    <strong>Food</strong>
-                    <span>Groceries</span>
+                    <strong>Grocer</strong>
+                    <span>Essentials</span>
                   </div>
                   <div class="mini-card">
                     <strong>Africa</strong>
@@ -476,7 +531,7 @@
                   </div>
                   <div class="mini-card">
                     <strong>Logis</strong>
-                    <span>Delivery</span>
+                    <span>Fast shipping</span>
                   </div>
                 </div>
               </div>
@@ -488,59 +543,30 @@
       <section id="about">
         <div class="container">
           <div class="section-head">
-            <h2>Bringing the world closer to your doorstep</h2>
+            <h2>Connecting people to opportunity</h2>
             <p>
-              We are building a modern marketplace for everyday essentials and premium goods,
-              helping individuals, families, and businesses shop with confidence.
+              We serve the modern buyer and growing business with a trusted digital marketplace
+              built on quality, speed, and value.
             </p>
           </div>
 
           <div class="features">
             <article class="card">
               <div class="icon" aria-hidden="true">📦</div>
-              <h3>Curated Products</h3>
-              <p>Discover quality technology items, household essentials, and trending products from trusted suppliers.</p>
+              <h3>Curated quality</h3>
+              <p>We focus on products and services that meet customer expectations for trust, value, and reliability.</p>
             </article>
 
             <article class="card">
               <div class="icon" aria-hidden="true">🌍</div>
-              <h3>Global Reach</h3>
-              <p>Serve customers across borders with a marketplace designed for accessibility, reliability, and growth.</p>
+              <h3>Global reach</h3>
+              <p>Our model supports international trade, supplier sourcing, and strong access to new market opportunities.</p>
             </article>
 
             <article class="card">
               <div class="icon" aria-hidden="true">🚚</div>
-              <h3>Efficient Logistics</h3>
-              <p>Enjoy a smooth delivery journey with dependable shipping, tracking, and customer support.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="categories">
-        <div class="container">
-          <div class="section-head">
-            <h2>Popular categories</h2>
-            <p>Everything you need, all in one place.</p>
-          </div>
-
-          <div class="categories">
-            <article class="card">
-              <div class="icon" aria-hidden="true">💻</div>
-              <h3>Technology</h3>
-              <p>Smart gadgets, accessories, electronics, and digital tools for work and lifestyle.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon" aria-hidden="true">🛒</div>
-              <h3>Supermarket</h3>
-              <p>Daily essentials, household items, groceries, and convenience-focused shopping.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon" aria-hidden="true">🌿</div>
-              <h3>African Products</h3>
-              <p>Authentic and culturally rich items that celebrate quality, heritage, and identity.</p>
+              <h3>Reliable logistics</h3>
+              <p>We help customers move goods smoothly with efficient fulfillment and dependable delivery support.</p>
             </article>
           </div>
         </div>
@@ -549,36 +575,72 @@
       <section id="services">
         <div class="container">
           <div class="section-head">
-            <h2>Why choose us</h2>
-            <p>We focus on convenience, trust, and real value for every order.</p>
+            <h2>What we do</h2>
+            <p>Built to support modern businesses, buyers, and connected communities.</p>
           </div>
 
-          <div class="features">
+          <div class="services-grid">
+            <article class="card">
+              <div class="icon" aria-hidden="true">💻</div>
+              <h3>Technology & Electronics</h3>
+              <p>Smart devices, connectivity tools, and modern digital solutions for personal and business use.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">🛒</div>
+              <h3>Supermarket Goods</h3>
+              <p>Everyday essentials and home products selected for convenience, affordability, and practical living.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">🌿</div>
+              <h3>African Products</h3>
+              <p>Unique cultural goods and authentic market offerings that celebrate heritage and identity.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="products">
+        <div class="container">
+          <div class="section-head">
+            <h2>Why choose OLAMILEKAN GLOBAL WORLD</h2>
+            <p>We help customers and partners access quality products and business opportunities with confidence.</p>
+          </div>
+
+          <div class="categories">
             <article class="card">
               <div class="icon" aria-hidden="true">✅</div>
-              <h3>Reliable shopping</h3>
-              <p>Thoughtful curation and dependable service help every customer shop with confidence.</p>
+              <h3>Trust-first service</h3>
+              <p>Built around clear communication, quality assurance, and customer-focused support.</p>
             </article>
 
             <article class="card">
               <div class="icon" aria-hidden="true">🤝</div>
-              <h3>Community impact</h3>
-              <p>Supporting local and global communities through meaningful commerce and inclusive access.</p>
+              <h3>Business partnerships</h3>
+              <p>Supporting trade relationships, supplier networks, and commercial opportunities across markets.</p>
             </article>
 
             <article class="card">
               <div class="icon" aria-hidden="true">⚡</div>
               <h3>Fast fulfillment</h3>
-              <p>Our logistics process is built to keep delivery smooth, timely, and customer-friendly.</p>
+              <p>Quick response, organized logistics, and a practical delivery approach for customer satisfaction.</p>
             </article>
           </div>
 
           <div class="cta-panel" id="contact">
             <div>
-              <h3>Ready to shop smarter?</h3>
-              <p>Experience a global marketplace built around quality, trust, and convenience.</p>
+              <h3>Ready to connect?</h3>
+              <p>Ask about products, international trade, logistics, or business partnerships.</p>
+              <ul class="contact-list">
+                <li><span class="contact-dot"></span> Email: olalekanb817@gmail.com</li>
+                <li><span class="contact-dot"></span> Phone: +234 802 559 2137</li>
+                <li><span class="contact-dot"></span> Location: Lagos, Nigeria</li>
+              </ul>
             </div>
-            <a class="button primary" href="mailto:hello@olamilekanglobalworld.com">Contact Us</a>
+            <div>
+              <a class="button primary" href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+            </div>
           </div>
         </div>
       </section>
@@ -589,6 +651,16 @@
         © <span id="year"></span> OLAMILEKAN GLOBAL WORLD. One World. Your Vision.
       </div>
     </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with OLAMILEKAN GLOBAL WORLD on WhatsApp"
+    >
+      WhatsApp
+    </a>
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
