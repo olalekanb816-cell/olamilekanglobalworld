@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="OLAMILEKAN GLOBAL WORLD is a global online marketplace for technology products, supermarket goods, African products, and logistics services."
+    />
+    <title>OLAMILEKAN GLOBAL WORLD</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --bg-soft: #121a2d;
+        --card: rgba(17, 24, 39, 0.86);
+        --primary: #22c55e;
+        --secondary: #38bdf8;
+        --accent: #f59e0b;
+        --text: #e5edf7;
+        --muted: #a8b4c7;
+        --border: rgba(148, 163, 184, 0.22);
+        --shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 25%),
+          radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.15), transparent 25%),
+          var(--bg);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(14px);
+        background: rgba(11, 16, 32, 0.75);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #03130b;
+        font-weight: 800;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        color: var(--muted);
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .nav-cta {
+        padding: 0.75rem 1.2rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--primary), #1fbf71);
+        color: #061b12;
+        font-weight: 700;
+      }
+
+      .hero {
+        padding: 5rem 0 4rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(56, 189, 248, 0.08);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        color: #bfeaff;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        line-height: 1.05;
+        margin: 1rem 0;
+        letter-spacing: -0.04em;
+      }
+
+      .highlight {
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: 1.08rem;
+        max-width: 640px;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.9rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 700;
+        transition: transform 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button.primary {
+        background: linear-gradient(135deg, var(--primary), #1fc576);
+        color: #03130b;
+      }
+
+      .button.secondary {
+        border: 1px solid var(--border);
+        background: rgba(15, 23, 42, 0.5);
+        color: var(--text);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .stat {
+        background: rgba(17, 24, 39, 0.75);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1rem;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 0.15rem;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .hero-card {
+        position: relative;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(18, 26, 45, 0.95), rgba(15, 23, 42, 0.9));
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-visual {
+        min-height: 520px;
+        padding: 1.2rem;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        background:
+          linear-gradient(160deg, rgba(34, 197, 94, 0.18), rgba(56, 189, 248, 0.08)),
+          url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      }
+
+      .product-window {
+        width: min(100%, 400px);
+        background: rgba(6, 11, 19, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 1.2rem;
+        backdrop-filter: blur(10px);
+      }
+
+      .window-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .window-dots {
+        display: flex;
+        gap: 0.45rem;
+      }
+
+      .window-dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .window-dots span:nth-child(1) { background: #fb7185; }
+      .window-dots span:nth-child(2) { background: #fbbf24; }
+      .window-dots span:nth-child(3) { background: var(--primary); }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 0.85rem;
+      }
+
+      .mini-card {
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 0.9rem 0.85rem;
+      }
+
+      .mini-card strong {
+        font-size: 1.25rem;
+      }
+
+      .mini-card span {
+        display: block;
+        margin-top: 0.25rem;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      section {
+        padding: 2.5rem 0;
+      }
+
+      .section-head {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      .section-head h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: -0.04em;
+        margin-bottom: 0.5rem;
+      }
+
+      .section-head p {
+        color: var(--muted);
+      }
+
+      .features,
+      .categories {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.3rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+        background: rgba(17, 24, 39, 0.75);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+      }
+
+      .icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 0.9rem;
+        background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(56, 189, 248, 0.2));
+        font-size: 1.5rem;
+      }
+
+      .card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta-panel {
+        margin-top: 2rem;
+        padding: 2rem;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(56, 189, 248, 0.08));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .cta-panel h3 {
+        margin: 0 0 0.2rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+      }
+
+      .cta-panel p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 2rem 0 3rem;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid var(--border);
+      }
+
+      @media (max-width: 880px) {
+        .hero-grid,
+        .features,
+        .categories,
+        .cta-panel {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          padding-top: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="OLAMILEKAN GLOBAL WORLD home">
+          <span class="brand-mark">O</span>
+          <span>OLAMILEKAN GLOBAL WORLD</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#categories">Categories</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="nav-cta" href="#contact">Shop Now</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">One World. Your Vision.</div>
+            <h1>
+              Your gateway to
+              <span class="highlight">global shopping</span>
+              and trusted delivery.
+            </h1>
+            <p class="lead">
+              OLAMILEKAN GLOBAL WORLD connects shoppers to technology products,
+              supermarket essentials, authentic African goods, and efficient logistics
+              services designed to serve communities worldwide.
+            </p>
+
+            <div class="cta-row">
+              <a class="button primary" href="#categories">Explore Products</a>
+              <a class="button secondary" href="#services">Our Services</a>
+            </div>
+
+            <div class="stats" aria-label="Key business stats">
+              <div class="stat">
+                <strong>100%</strong>
+                <span>Customer-focused</span>
+              </div>
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>Global support</span>
+              </div>
+              <div class="stat">
+                <strong>Fast</strong>
+                <span>Logistics network</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Marketplace overview card">
+            <div class="hero-visual">
+              <div class="product-window">
+                <div class="window-header">
+                  <div class="window-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span>Marketplace</span>
+                </div>
+
+                <div class="product-grid">
+                  <div class="mini-card">
+                    <strong>Tech</strong>
+                    <span>Devices</span>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Food</strong>
+                    <span>Groceries</span>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Africa</strong>
+                    <span>Heritage</span>
+                  </div>
+                  <div class="mini-card">
+                    <strong>Logis</strong>
+                    <span>Delivery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-head">
+            <h2>Bringing the world closer to your doorstep</h2>
+            <p>
+              We are building a modern marketplace for everyday essentials and premium goods,
+              helping individuals, families, and businesses shop with confidence.
+            </p>
+          </div>
+
+          <div class="features">
+            <article class="card">
+              <div class="icon" aria-hidden="true">📦</div>
+              <h3>Curated Products</h3>
+              <p>Discover quality technology items, household essentials, and trending products from trusted suppliers.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">🌍</div>
+              <h3>Global Reach</h3>
+              <p>Serve customers across borders with a marketplace designed for accessibility, reliability, and growth.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">🚚</div>
+              <h3>Efficient Logistics</h3>
+              <p>Enjoy a smooth delivery journey with dependable shipping, tracking, and customer support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="categories">
+        <div class="container">
+          <div class="section-head">
+            <h2>Popular categories</h2>
+            <p>Everything you need, all in one place.</p>
+          </div>
+
+          <div class="categories">
+            <article class="card">
+              <div class="icon" aria-hidden="true">💻</div>
+              <h3>Technology</h3>
+              <p>Smart gadgets, accessories, electronics, and digital tools for work and lifestyle.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">🛒</div>
+              <h3>Supermarket</h3>
+              <p>Daily essentials, household items, groceries, and convenience-focused shopping.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">🌿</div>
+              <h3>African Products</h3>
+              <p>Authentic and culturally rich items that celebrate quality, heritage, and identity.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-head">
+            <h2>Why choose us</h2>
+            <p>We focus on convenience, trust, and real value for every order.</p>
+          </div>
+
+          <div class="features">
+            <article class="card">
+              <div class="icon" aria-hidden="true">✅</div>
+              <h3>Reliable shopping</h3>
+              <p>Thoughtful curation and dependable service help every customer shop with confidence.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">🤝</div>
+              <h3>Community impact</h3>
+              <p>Supporting local and global communities through meaningful commerce and inclusive access.</p>
+            </article>
+
+            <article class="card">
+              <div class="icon" aria-hidden="true">⚡</div>
+              <h3>Fast fulfillment</h3>
+              <p>Our logistics process is built to keep delivery smooth, timely, and customer-friendly.</p>
+            </article>
+          </div>
+
+          <div class="cta-panel" id="contact">
+            <div>
+              <h3>Ready to shop smarter?</h3>
+              <p>Experience a global marketplace built around quality, trust, and convenience.</p>
+            </div>
+            <a class="button primary" href="mailto:hello@olamilekanglobalworld.com">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        © <span id="year"></span> OLAMILEKAN GLOBAL WORLD. One World. Your Vision.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
