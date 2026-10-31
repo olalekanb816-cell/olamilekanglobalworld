@@ -5,656 +5,462 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="OLAMILEKAN GLOBAL WORLD is a premium marketplace and business platform for technology, electronics, African products, and global trade solutions."
+      content="OLAM AI BUSINESS ASSISTANT dashboard for planning, invoicing, advertising, sales tracking, and customer support."
     />
-    <title>OLAMILEKAN GLOBAL WORLD | One World. Your Vision.</title>
-    <style>
-      :root {
-        --bg: #0b0b0d;
-        --bg-soft: #141416;
-        --panel: #1a1a1d;
-        --panel-alt: rgba(255, 255, 255, 0.03);
-        --gold: #d4af37;
-        --gold-soft: #f3d77a;
-        --text: #f5f5f5;
-        --muted: #c7c4bf;
-        --border: rgba(212, 175, 55, 0.28);
-        --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-        --success: #25d366;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 25%),
-          radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.08), transparent 20%),
-          var(--bg);
-        line-height: 1.6;
-      }
-
-      a {
-        color: var(--text);
-        text-decoration: none;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      .container {
-        width: min(1120px, calc(100% - 2rem));
-        margin: 0 auto;
-      }
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        backdrop-filter: blur(14px);
-        background: rgba(11, 11, 13, 0.82);
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 76px;
-        gap: 1rem;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
-
-      .brand-mark {
-        width: 40px;
-        height: 40px;
-        display: grid;
-        place-items: center;
-        border-radius: 12px;
-        background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-        color: #090909;
-        font-weight: 900;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 1.6rem;
-        color: var(--muted);
-      }
-
-      .nav-links a:hover,
-      .nav-links a:focus-visible {
-        color: var(--gold-soft);
-      }
-
-      .nav-cta,
-      .button,
-      .whatsapp-float {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        font-weight: 700;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .nav-cta,
-      .button.primary {
-        background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-        color: #0d0d0d;
-        box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-      }
-
-      .nav-cta {
-        padding: 0.8rem 1.2rem;
-      }
-
-      .button {
-        padding: 1rem 1.5rem;
-      }
-
-      .button:hover,
-      .nav-cta:hover,
-      .whatsapp-float:hover {
-        transform: translateY(-1px);
-      }
-
-      .button.secondary {
-        background: transparent;
-        border: 1px solid var(--border);
-        color: var(--text);
-      }
-
-      .hero {
-        padding: 5rem 0 3rem;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        align-items: center;
-        gap: 2rem;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--gold-soft);
-        border: 1px solid var(--border);
-        background: rgba(212, 175, 55, 0.06);
-        border-radius: 999px;
-        padding: 0.6rem 0.9rem;
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        font-size: clamp(2.7rem, 5vw, 5rem);
-        line-height: 1.05;
-        margin: 1rem 0;
-        letter-spacing: -0.05em;
-      }
-
-      .highlight {
-        background: linear-gradient(90deg, var(--gold-soft), var(--gold));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
-
-      .lead {
-        color: var(--muted);
-        font-size: 1.08rem;
-        max-width: 640px;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(120px, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
-      }
-
-      .stat {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        padding: 1rem;
-      }
-
-      .stat strong {
-        display: block;
-        font-size: 1.55rem;
-        color: var(--gold-soft);
-        margin-bottom: 0.2rem;
-      }
-
-      .stat span {
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-
-      .hero-card {
-        position: relative;
-        border-radius: 28px;
-        background: linear-gradient(135deg, rgba(26, 26, 29, 0.96), rgba(15, 15, 17, 0.92));
-        border: 1px solid var(--border);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-      }
-
-      .hero-visual {
-        min-height: 500px;
-        padding: 1.2rem;
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        background:
-          linear-gradient(160deg, rgba(212, 175, 55, 0.16), rgba(0, 0, 0, 0.1)),
-          url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      }
-
-      .product-window {
-        width: min(100%, 400px);
-        background: rgba(8, 8, 10, 0.72);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        padding: 1.2rem;
-        backdrop-filter: blur(10px);
-      }
-
-      .window-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
-        color: var(--muted);
-        font-size: 0.82rem;
-      }
-
-      .window-dots {
-        display: flex;
-        gap: 0.45rem;
-      }
-
-      .window-dots span {
-        width: 10px;
-        height: 10px;
-        display: block;
-        border-radius: 50%;
-      }
-
-      .window-dots span:nth-child(1) { background: #ff5f57; }
-      .window-dots span:nth-child(2) { background: #ffbd2f; }
-      .window-dots span:nth-child(3) { background: var(--gold); }
-
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(120px, 1fr));
-        gap: 0.85rem;
-      }
-
-      .mini-card {
-        background: rgba(17, 17, 19, 0.85);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 0.9rem 0.85rem;
-      }
-
-      .mini-card strong {
-        display: block;
-        font-size: 1.25rem;
-        color: var(--gold-soft);
-      }
-
-      .mini-card span {
-        display: block;
-        margin-top: 0.25rem;
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      section {
-        padding: 2.5rem 0;
-      }
-
-      .section-head {
-        text-align: center;
-        max-width: 720px;
-        margin: 0 auto 2rem;
-      }
-
-      .section-head h2 {
-        margin-bottom: 0.5rem;
-        font-size: clamp(2rem, 4vw, 3rem);
-        letter-spacing: -0.04em;
-      }
-
-      .section-head p {
-        color: var(--muted);
-        margin: 0;
-      }
-
-      .features,
-      .categories,
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.3rem;
-      }
-
-      .card {
-        padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--border);
-        border-radius: 20px;
-      }
-
-      .icon {
-        width: 52px;
-        height: 52px;
-        display: grid;
-        place-items: center;
-        border-radius: 14px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.08));
-        margin-bottom: 0.9rem;
-        font-size: 1.5rem;
-      }
-
-      .card h3 {
-        margin: 0 0 0.5rem;
-        font-size: 1.2rem;
-      }
-
-      .card p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .cta-panel {
-        margin-top: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 2rem;
-        border-radius: 24px;
-        border: 1px solid var(--border);
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.09), rgba(255, 255, 255, 0.02));
-      }
-
-      .cta-panel h3 {
-        margin: 0 0 0.2rem;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-      }
-
-      .cta-panel p {
-        margin: 0;
-        color: var(--muted);
-      }
-
-      .contact-list {
-        list-style: none;
-        padding: 0;
-        margin: 1.5rem 0 0;
-        display: grid;
-        gap: 0.8rem;
-      }
-
-      .contact-list li {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        color: var(--muted);
-      }
-
-      .contact-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: var(--gold);
-        box-shadow: 0 0 18px rgba(212, 175, 55, 0.8);
-      }
-
-      footer {
-        padding: 2rem 0 3rem;
-        border-top: 1px solid var(--border);
-        color: var(--muted);
-        text-align: center;
-      }
-
-      .whatsapp-float {
-        position: fixed;
-        right: 1.2rem;
-        bottom: 1.2rem;
-        width: 62px;
-        height: 62px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #18d26a, #25d366);
-        color: white;
-        box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
-        font-size: 1.8rem;
-        z-index: 60;
-      }
-
-      @media (max-width: 880px) {
-        .hero-grid,
-        .features,
-        .categories,
-        .services-grid,
-        .cta-panel {
-          grid-template-columns: 1fr;
-          display: grid;
-        }
-
-        .nav-links {
-          display: none;
-        }
-
-        .hero {
-          padding-top: 3rem;
-        }
-
-        .stats {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <title>OLAM AI BUSINESS ASSISTANT | Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="container nav">
-        <a href="#top" class="brand" aria-label="OLAMILEKAN GLOBAL WORLD home">
-          <span class="brand-mark">O</span>
-          <span>OLAMILEKAN GLOBAL WORLD</span>
-        </a>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="logo-mark">O</div>
+          <div>
+            <p class="brand-label">OLAM</p>
+            <h2>AI Assistant</h2>
+          </div>
+        </div>
 
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#products">Products</a>
-          <a href="#contact">Contact</a>
+        <nav class="sidebar-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview">Overview</a>
+          <a class="nav-link" href="#tools">Tools</a>
+          <a class="nav-link" href="#plan-generator">Plan Generator</a>
+          <a class="nav-link" href="#invoice-generator">Invoices</a>
+          <a class="nav-link" href="#products">Catalogue</a>
+          <a class="nav-link" href="#support">Support</a>
         </nav>
 
-        <a class="nav-cta" href="#contact">Get Started</a>
-      </div>
-    </header>
+        <div class="sidebar-card">
+          <p class="muted-label">Status</p>
+          <strong>Free Launch Ready</strong>
+          <span>Build → Test → Launch</span>
+        </div>
+      </aside>
 
-    <main id="top">
-      <section class="hero">
-        <div class="container hero-grid">
+      <main class="workspace">
+        <header class="topbar">
           <div>
-            <div class="eyebrow">One World. Your Vision.</div>
-            <h1>
-              Premium global commerce for
-              <span class="highlight">technology, trade, and lifestyle.</span>
-            </h1>
-            <p class="lead">
-              OLAMILEKAN GLOBAL WORLD connects customers and businesses to quality technology,
-              supermarket essentials, authentic African products, and reliable logistics services
-              across markets worldwide.
-            </p>
-
-            <div class="cta-row">
-              <a class="button primary" href="#products">Explore Products</a>
-              <a class="button secondary" href="#services">Our Services</a>
-            </div>
-
-            <div class="stats" aria-label="Business metrics">
-              <div class="stat">
-                <strong>Global</strong>
-                <span>Market access</span>
-              </div>
-              <div class="stat">
-                <strong>24/7</strong>
-                <span>Customer support</span>
-              </div>
-              <div class="stat">
-                <strong>Trusted</strong>
-                <span>Delivery network</span>
-              </div>
-            </div>
+            <p class="eyebrow">OLAMILEKAN GLOBAL WORLD SOFTWARE TECHNOLOGY</p>
+            <h1>Business command center</h1>
           </div>
-
-          <div class="hero-card" aria-label="Marketplace overview card">
-            <div class="hero-visual">
-              <div class="product-window">
-                <div class="window-header">
-                  <div class="window-dots" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <span>Marketplace</span>
-                </div>
-
-                <div class="product-grid">
-                  <div class="mini-card">
-                    <strong>Tech</strong>
-                    <span>Electronics</span>
-                  </div>
-                  <div class="mini-card">
-                    <strong>Grocer</strong>
-                    <span>Essentials</span>
-                  </div>
-                  <div class="mini-card">
-                    <strong>Africa</strong>
-                    <span>Heritage</span>
-                  </div>
-                  <div class="mini-card">
-                    <strong>Logis</strong>
-                    <span>Fast shipping</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="topbar-actions">
+            <button class="ghost-button" type="button">Export report</button>
+            <button class="primary-button" type="button">Launch dashboard</button>
           </div>
-        </div>
-      </section>
+        </header>
 
-      <section id="about">
-        <div class="container">
-          <div class="section-head">
-            <h2>Connecting people to opportunity</h2>
+        <section id="overview" class="hero-panel">
+          <div class="hero-copy">
+            <p class="section-tag">OLAM AI BUSINESS ASSISTANT</p>
+            <h2>Grow smarter with one connected dashboard.</h2>
             <p>
-              We serve the modern buyer and growing business with a trusted digital marketplace
-              built on quality, speed, and value.
+              Manage business plans, generate invoices and receipts, market products, track sales,
+              and support customers from one premium operations hub built for Android and desktop.
             </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="#tools">Open tools</a>
+              <a class="secondary-button" href="#plan-generator">Create plan</a>
+            </div>
           </div>
 
-          <div class="features">
-            <article class="card">
-              <div class="icon" aria-hidden="true">📦</div>
-              <h3>Curated quality</h3>
-              <p>We focus on products and services that meet customer expectations for trust, value, and reliability.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon" aria-hidden="true">🌍</div>
-              <h3>Global reach</h3>
-              <p>Our model supports international trade, supplier sourcing, and strong access to new market opportunities.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon" aria-hidden="true">🚚</div>
-              <h3>Reliable logistics</h3>
-              <p>We help customers move goods smoothly with efficient fulfillment and dependable delivery support.</p>
-            </article>
+          <div class="hero-summary">
+            <div class="summary-box accent">
+              <span>Monthly revenue</span>
+              <strong id="monthlyRevenue">₦3,240,000</strong>
+            </div>
+            <div class="summary-box">
+              <span>Market activity</span>
+              <strong>72%</strong>
+            </div>
+            <div class="summary-box">
+              <span>Customer support</span>
+              <strong>24/7</strong>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="services">
-        <div class="container">
-          <div class="section-head">
-            <h2>What we do</h2>
-            <p>Built to support modern businesses, buyers, and connected communities.</p>
-          </div>
+        <section class="metrics-grid" aria-label="Business metrics">
+          <article class="metric-card">
+            <span>Total sales</span>
+            <strong id="totalSales">₦0</strong>
+            <small>+18.4% this month</small>
+          </article>
+          <article class="metric-card">
+            <span>Expenses</span>
+            <strong id="totalExpenses">₦0</strong>
+            <small>Controlled spending</small>
+          </article>
+          <article class="metric-card">
+            <span>Net profit</span>
+            <strong id="netProfit">₦0</strong>
+            <small>Healthy margin</small>
+          </article>
+          <article class="metric-card">
+            <span>Catalog items</span>
+            <strong id="catalogCount">0</strong>
+            <small>Live inventory</small>
+          </article>
+        </section>
 
-          <div class="services-grid">
-            <article class="card">
-              <div class="icon" aria-hidden="true">💻</div>
-              <h3>Technology & Electronics</h3>
-              <p>Smart devices, connectivity tools, and modern digital solutions for personal and business use.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon" aria-hidden="true">🛒</div>
-              <h3>Supermarket Goods</h3>
-              <p>Everyday essentials and home products selected for convenience, affordability, and practical living.</p>
-            </article>
-
-            <article class="card">
-              <div class="icon" aria-hidden="true">🌿</div>
-              <h3>African Products</h3>
-              <p>Unique cultural goods and authentic market offerings that celebrate heritage and identity.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="products">
-        <div class="container">
-          <div class="section-head">
-            <h2>Why choose OLAMILEKAN GLOBAL WORLD</h2>
-            <p>We help customers and partners access quality products and business opportunities with confidence.</p>
+        <section id="tools" class="module-section">
+          <div class="section-heading">
+            <p class="section-tag">Release 1</p>
+            <h3>Business tools</h3>
           </div>
 
-          <div class="categories">
-            <article class="card">
-              <div class="icon" aria-hidden="true">✅</div>
-              <h3>Trust-first service</h3>
-              <p>Built around clear communication, quality assurance, and customer-focused support.</p>
+          <div class="module-grid">
+            <article class="tool-card">
+              <div class="tool-icon">📋</div>
+              <h4>Business Plan Generator</h4>
+              <p>Create a startup or growth plan from business inputs.</p>
+              <button type="button" class="mini-action" data-scroll="#plan-generator">Open</button>
             </article>
 
-            <article class="card">
-              <div class="icon" aria-hidden="true">🤝</div>
-              <h3>Business partnerships</h3>
-              <p>Supporting trade relationships, supplier networks, and commercial opportunities across markets.</p>
+            <article class="tool-card">
+              <div class="tool-icon">🧾</div>
+              <h4>Invoice Generator</h4>
+              <p>Draft and total invoices for services or products.</p>
+              <button type="button" class="mini-action" data-scroll="#invoice-generator">Open</button>
             </article>
 
-            <article class="card">
-              <div class="icon" aria-hidden="true">⚡</div>
-              <h3>Fast fulfillment</h3>
-              <p>Quick response, organized logistics, and a practical delivery approach for customer satisfaction.</p>
+            <article class="tool-card">
+              <div class="tool-icon">🧾</div>
+              <h4>Receipt Generator</h4>
+              <p>Create customer-ready receipts instantly.</p>
+              <button type="button" class="mini-action" data-scroll="#receipt-generator">Open</button>
+            </article>
+
+            <article class="tool-card">
+              <div class="tool-icon">📣</div>
+              <h4>AI Advertisement Generator</h4>
+              <p>Turn product ideas into persuasive ads and promos.</p>
+              <button type="button" class="mini-action" data-scroll="#ad-generator">Open</button>
+            </article>
+
+            <article class="tool-card">
+              <div class="tool-icon">💰</div>
+              <h4>Sales & Expense Manager</h4>
+              <p>Track money flowing in and out of the business.</p>
+              <button type="button" class="mini-action" data-scroll="#finance-manager">Open</button>
+            </article>
+
+            <article class="tool-card">
+              <div class="tool-icon">🛍️</div>
+              <h4>Product Catalogue</h4>
+              <p>Showcase products with pricing and categories.</p>
+              <button type="button" class="mini-action" data-scroll="#products">Open</button>
+            </article>
+
+            <article class="tool-card">
+              <div class="tool-icon">💬</div>
+              <h4>WhatsApp Support</h4>
+              <p>Respond to customers quickly through WhatsApp.</p>
+              <button type="button" class="mini-action" data-scroll="#support">Open</button>
             </article>
           </div>
+        </section>
 
-          <div class="cta-panel" id="contact">
-            <div>
-              <h3>Ready to connect?</h3>
-              <p>Ask about products, international trade, logistics, or business partnerships.</p>
-              <ul class="contact-list">
-                <li><span class="contact-dot"></span> Email: olalekanb817@gmail.com</li>
-                <li><span class="contact-dot"></span> Phone: +234 802 559 2137</li>
-                <li><span class="contact-dot"></span> Location: Lagos, Nigeria</li>
+        <section id="plan-generator" class="tool-panel">
+          <div class="section-heading left">
+            <p class="section-tag">Planner</p>
+            <h3>Business plan generator</h3>
+          </div>
+
+          <div class="panel-grid two-column">
+            <form id="businessPlanForm" class="form-panel">
+              <label>
+                Business name
+                <input type="text" name="businessName" placeholder="e.g. GoldNest Market" />
+              </label>
+
+              <label>
+                Industry
+                <select name="industry">
+                  <option value="Technology">Technology</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Food & Beverage">Food & Beverage</option>
+                  <option value="Logistics">Logistics</option>
+                </select>
+              </label>
+
+              <label>
+                Target market
+                <input type="text" name="market" placeholder="e.g. Working professionals in Lagos" />
+              </label>
+
+              <label>
+                Monthly budget
+                <input type="number" name="budget" value="350000" min="0" />
+              </label>
+
+              <label>
+                Goal
+                <select name="goal">
+                  <option value="Launch quickly">Launch quickly</option>
+                  <option value="Scale revenue">Scale revenue</option>
+                  <option value="Improve customer retention">Improve customer retention</option>
+                  <option value="Expand internationally">Expand internationally</option>
+                </select>
+              </label>
+
+              <button type="submit" class="primary-button full">Generate plan</button>
+            </form>
+
+            <div id="planOutput" class="output-panel" aria-live="polite">
+              <h4>Sample business plan</h4>
+              <p>
+                GoldNest Market can launch a premium retail brand that combines local trust, digital
+                sales, and fast delivery. Focus on building repeat customers, improving digital
+                conversion, and creating a retention strategy around product quality and service.
+              </p>
+              <ul>
+                <li>Priority: customer acquisition and retention.</li>
+                <li>Budget focus: product sourcing, digital marketing, and support.</li>
+                <li>Target: high-value repeat buyers within 90 days.</li>
               </ul>
             </div>
-            <div>
-              <a class="button primary" href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </div>
+        </section>
+
+        <section id="invoice-generator" class="tool-panel">
+          <div class="section-heading left">
+            <p class="section-tag">Billing</p>
+            <h3>Invoice generator</h3>
+          </div>
+
+          <div class="panel-grid two-column">
+            <form id="invoiceForm" class="form-panel">
+              <label>
+                Customer name
+                <input type="text" name="customerName" placeholder="e.g. Zuri Traders" />
+              </label>
+
+              <label>
+                Item name
+                <input type="text" name="itemName" placeholder="e.g. Premium Setup" />
+              </label>
+
+              <div class="inline-fields">
+                <label>
+                  Quantity
+                  <input type="number" name="quantity" value="1" min="1" />
+                </label>
+                <label>
+                  Unit price
+                  <input type="number" name="unitPrice" value="2500" min="0" />
+                </label>
+              </div>
+
+              <div class="button-row">
+                <button type="submit" class="primary-button">Add item</button>
+                <button type="button" id="generateInvoice" class="secondary-button">Generate invoice</button>
+              </div>
+            </form>
+
+            <div class="output-panel invoice-panel">
+              <div class="invoice-header">
+                <div>
+                  <p class="muted-label">Invoice</p>
+                  <h4 id="invoiceTitle">OLAM AI BUSINESS ASSISTANT</h4>
+                </div>
+                <div class="invoice-meta">
+                  <span>Due: <strong id="invoiceDueDate">30 days</strong></span>
+                </div>
+              </div>
+
+              <div id="invoiceItems" class="invoice-items"></div>
+
+              <div class="invoice-total">
+                <span>Subtotal</span>
+                <strong id="subtotalAmount">₦0</strong>
+              </div>
+              <div class="invoice-total">
+                <span>VAT (7.5%)</span>
+                <strong id="vatAmount">₦0</strong>
+              </div>
+              <div class="invoice-total grand">
+                <span>Total</span>
+                <strong id="totalAmount">₦0</strong>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
 
-    <footer>
-      <div class="container">
-        © <span id="year"></span> OLAMILEKAN GLOBAL WORLD. One World. Your Vision.
-      </div>
-    </footer>
+        <section id="receipt-generator" class="tool-panel compact">
+          <div class="section-heading left">
+            <p class="section-tag">Receipt</p>
+            <h3>Receipt generator</h3>
+          </div>
+
+          <div class="receipt-box" id="receiptBox">
+            <div class="receipt-top">
+              <div>
+                <strong>OLAM AI BUSINESS ASSISTANT</strong>
+                <p>Payment details</p>
+              </div>
+              <span>Receipt</span>
+            </div>
+            <div class="receipt-row">
+              <span>Customer</span>
+              <strong>Premium Retail Client</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Paid</span>
+              <strong>₦0</strong>
+            </div>
+            <div class="receipt-row">
+              <span>Method</span>
+              <strong>Bank transfer</strong>
+            </div>
+            <button type="button" id="generateReceipt" class="primary-button">Generate receipt</button>
+          </div>
+        </section>
+
+        <section id="ad-generator" class="tool-panel">
+          <div class="section-heading left">
+            <p class="section-tag">Marketing</p>
+            <h3>AI advertisement generator</h3>
+          </div>
+
+          <div class="panel-grid two-column">
+            <form id="adForm" class="form-panel">
+              <label>
+                Product or service
+                <input type="text" name="adProduct" placeholder="e.g. Smart Growth Kit" />
+              </label>
+
+              <label>
+                Audience
+                <input type="text" name="audience" placeholder="e.g. SMEs and startups" />
+              </label>
+
+              <label>
+                Campaign tone
+                <select name="tone">
+                  <option value="Premium">Premium</option>
+                  <option value="Bold">Bold</option>
+                  <option value="Trust-building">Trust-building</option>
+                  <option value="Urgent">Urgent</option>
+                </select>
+              </label>
+
+              <button type="submit" class="primary-button full">Generate ad</button>
+            </form>
+
+            <div id="adOutput" class="output-panel ad-output">
+              <h4>Campaign copy</h4>
+              <p>
+                Launch your growth with our premium business toolkit. Built for ambitious teams that
+                want faster operations, better customer service, and smarter sales results.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="finance-manager" class="tool-panel">
+          <div class="section-heading left">
+            <p class="section-tag">Finance</p>
+            <h3>Sales & expense manager</h3>
+          </div>
+
+          <div class="panel-grid two-column">
+            <form id="transactionForm" class="form-panel">
+              <label>
+                Entry type
+                <select name="entryType">
+                  <option value="sale">Sale</option>
+                  <option value="expense">Expense</option>
+                </select>
+              </label>
+
+              <label>
+                Title
+                <input type="text" name="title" placeholder="e.g. Product sale" />
+              </label>
+
+              <label>
+                Category
+                <input type="text" name="category" placeholder="e.g. Marketing" />
+              </label>
+
+              <label>
+                Amount (₦)
+                <input type="number" name="amount" value="50000" min="0" />
+              </label>
+
+              <button type="submit" class="primary-button full">Add transaction</button>
+            </form>
+
+            <div class="output-panel finance-panel">
+              <div class="finance-summary">
+                <div>
+                  <span>Sales</span>
+                  <strong id="financeSales">₦0</strong>
+                </div>
+                <div>
+                  <span>Expenses</span>
+                  <strong id="financeExpenses">₦0</strong>
+                </div>
+                <div>
+                  <span>Profit</span>
+                  <strong id="financeProfit">₦0</strong>
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody id="transactionTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section id="products" class="tool-panel">
+          <div class="section-heading left">
+            <p class="section-tag">Storefront</p>
+            <h3>Product catalogue</h3>
+          </div>
+
+          <div class="catalog-controls" aria-label="Product filter controls">
+            <button class="filter-chip active" data-filter="all" type="button">All</button>
+            <button class="filter-chip" data-filter="electronics" type="button">Electronics</button>
+            <button class="filter-chip" data-filter="groceries" type="button">Groceries</button>
+            <button class="filter-chip" data-filter="promo" type="button">Promos</button>
+          </div>
+
+          <div id="catalogGrid" class="catalog-grid"></div>
+        </section>
+
+        <section id="support" class="tool-panel support-panel">
+          <div class="section-heading left">
+            <p class="section-tag">Support</p>
+            <h3>WhatsApp customer support</h3>
+          </div>
+
+          <div class="support-box">
+            <div>
+              <p class="muted-label">Opt-in support</p>
+              <h4>Live assistance for buyers, sellers, and partners</h4>
+            </div>
+            <div class="support-links">
+              <a class="primary-button" href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20need%20support%20for%20my%20business%20dashboard." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              <a class="secondary-button" href="mailto:olalekanb817@gmail.com">Email support</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
     <a
       class="whatsapp-float"
-      href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+      href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20would%20like%20to%20ask%20about%20the%20business%20assistant."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with OLAMILEKAN GLOBAL WORLD on WhatsApp"
@@ -662,8 +468,6 @@
       WhatsApp
     </a>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
