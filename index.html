@@ -5,468 +5,290 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="OLAM AI BUSINESS ASSISTANT dashboard for planning, invoicing, advertising, sales tracking, and customer support."
+      content="OLAMILEKAN GLOBAL WORLD INVESTMENT connects commerce, technology, logistics, and investment opportunities across Africa and the world."
     />
-    <title>OLAM AI BUSINESS ASSISTANT | Dashboard</title>
+    <title>OLAMILEKAN GLOBAL WORLD INVESTMENT</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar">
-        <div class="brand-block">
-          <div class="logo-mark">O</div>
-          <div>
-            <p class="brand-label">OLAM</p>
-            <h2>AI Assistant</h2>
-          </div>
-        </div>
-
-        <nav class="sidebar-nav" aria-label="Main navigation">
-          <a class="nav-link active" href="#overview">Overview</a>
-          <a class="nav-link" href="#tools">Tools</a>
-          <a class="nav-link" href="#plan-generator">Plan Generator</a>
-          <a class="nav-link" href="#invoice-generator">Invoices</a>
-          <a class="nav-link" href="#products">Catalogue</a>
-          <a class="nav-link" href="#support">Support</a>
-        </nav>
-
-        <div class="sidebar-card">
-          <p class="muted-label">Status</p>
-          <strong>Free Launch Ready</strong>
-          <span>Build → Test → Launch</span>
-        </div>
-      </aside>
-
-      <main class="workspace">
-        <header class="topbar">
-          <div>
-            <p class="eyebrow">OLAMILEKAN GLOBAL WORLD SOFTWARE TECHNOLOGY</p>
-            <h1>Business command center</h1>
-          </div>
-          <div class="topbar-actions">
-            <button class="ghost-button" type="button">Export report</button>
-            <button class="primary-button" type="button">Launch dashboard</button>
-          </div>
-        </header>
-
-        <section id="overview" class="hero-panel">
-          <div class="hero-copy">
-            <p class="section-tag">OLAM AI BUSINESS ASSISTANT</p>
-            <h2>Grow smarter with one connected dashboard.</h2>
-            <p>
-              Manage business plans, generate invoices and receipts, market products, track sales,
-              and support customers from one premium operations hub built for Android and desktop.
-            </p>
-            <div class="hero-actions">
-              <a class="primary-button" href="#tools">Open tools</a>
-              <a class="secondary-button" href="#plan-generator">Create plan</a>
-            </div>
-          </div>
-
-          <div class="hero-summary">
-            <div class="summary-box accent">
-              <span>Monthly revenue</span>
-              <strong id="monthlyRevenue">₦3,240,000</strong>
-            </div>
-            <div class="summary-box">
-              <span>Market activity</span>
-              <strong>72%</strong>
-            </div>
-            <div class="summary-box">
-              <span>Customer support</span>
-              <strong>24/7</strong>
-            </div>
-          </div>
-        </section>
-
-        <section class="metrics-grid" aria-label="Business metrics">
-          <article class="metric-card">
-            <span>Total sales</span>
-            <strong id="totalSales">₦0</strong>
-            <small>+18.4% this month</small>
-          </article>
-          <article class="metric-card">
-            <span>Expenses</span>
-            <strong id="totalExpenses">₦0</strong>
-            <small>Controlled spending</small>
-          </article>
-          <article class="metric-card">
-            <span>Net profit</span>
-            <strong id="netProfit">₦0</strong>
-            <small>Healthy margin</small>
-          </article>
-          <article class="metric-card">
-            <span>Catalog items</span>
-            <strong id="catalogCount">0</strong>
-            <small>Live inventory</small>
-          </article>
-        </section>
-
-        <section id="tools" class="module-section">
-          <div class="section-heading">
-            <p class="section-tag">Release 1</p>
-            <h3>Business tools</h3>
-          </div>
-
-          <div class="module-grid">
-            <article class="tool-card">
-              <div class="tool-icon">📋</div>
-              <h4>Business Plan Generator</h4>
-              <p>Create a startup or growth plan from business inputs.</p>
-              <button type="button" class="mini-action" data-scroll="#plan-generator">Open</button>
-            </article>
-
-            <article class="tool-card">
-              <div class="tool-icon">🧾</div>
-              <h4>Invoice Generator</h4>
-              <p>Draft and total invoices for services or products.</p>
-              <button type="button" class="mini-action" data-scroll="#invoice-generator">Open</button>
-            </article>
-
-            <article class="tool-card">
-              <div class="tool-icon">🧾</div>
-              <h4>Receipt Generator</h4>
-              <p>Create customer-ready receipts instantly.</p>
-              <button type="button" class="mini-action" data-scroll="#receipt-generator">Open</button>
-            </article>
-
-            <article class="tool-card">
-              <div class="tool-icon">📣</div>
-              <h4>AI Advertisement Generator</h4>
-              <p>Turn product ideas into persuasive ads and promos.</p>
-              <button type="button" class="mini-action" data-scroll="#ad-generator">Open</button>
-            </article>
-
-            <article class="tool-card">
-              <div class="tool-icon">💰</div>
-              <h4>Sales & Expense Manager</h4>
-              <p>Track money flowing in and out of the business.</p>
-              <button type="button" class="mini-action" data-scroll="#finance-manager">Open</button>
-            </article>
-
-            <article class="tool-card">
-              <div class="tool-icon">🛍️</div>
-              <h4>Product Catalogue</h4>
-              <p>Showcase products with pricing and categories.</p>
-              <button type="button" class="mini-action" data-scroll="#products">Open</button>
-            </article>
-
-            <article class="tool-card">
-              <div class="tool-icon">💬</div>
-              <h4>WhatsApp Support</h4>
-              <p>Respond to customers quickly through WhatsApp.</p>
-              <button type="button" class="mini-action" data-scroll="#support">Open</button>
-            </article>
-          </div>
-        </section>
-
-        <section id="plan-generator" class="tool-panel">
-          <div class="section-heading left">
-            <p class="section-tag">Planner</p>
-            <h3>Business plan generator</h3>
-          </div>
-
-          <div class="panel-grid two-column">
-            <form id="businessPlanForm" class="form-panel">
-              <label>
-                Business name
-                <input type="text" name="businessName" placeholder="e.g. GoldNest Market" />
-              </label>
-
-              <label>
-                Industry
-                <select name="industry">
-                  <option value="Technology">Technology</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Agriculture">Agriculture</option>
-                  <option value="Food & Beverage">Food & Beverage</option>
-                  <option value="Logistics">Logistics</option>
-                </select>
-              </label>
-
-              <label>
-                Target market
-                <input type="text" name="market" placeholder="e.g. Working professionals in Lagos" />
-              </label>
-
-              <label>
-                Monthly budget
-                <input type="number" name="budget" value="350000" min="0" />
-              </label>
-
-              <label>
-                Goal
-                <select name="goal">
-                  <option value="Launch quickly">Launch quickly</option>
-                  <option value="Scale revenue">Scale revenue</option>
-                  <option value="Improve customer retention">Improve customer retention</option>
-                  <option value="Expand internationally">Expand internationally</option>
-                </select>
-              </label>
-
-              <button type="submit" class="primary-button full">Generate plan</button>
-            </form>
-
-            <div id="planOutput" class="output-panel" aria-live="polite">
-              <h4>Sample business plan</h4>
-              <p>
-                GoldNest Market can launch a premium retail brand that combines local trust, digital
-                sales, and fast delivery. Focus on building repeat customers, improving digital
-                conversion, and creating a retention strategy around product quality and service.
-              </p>
-              <ul>
-                <li>Priority: customer acquisition and retention.</li>
-                <li>Budget focus: product sourcing, digital marketing, and support.</li>
-                <li>Target: high-value repeat buyers within 90 days.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="invoice-generator" class="tool-panel">
-          <div class="section-heading left">
-            <p class="section-tag">Billing</p>
-            <h3>Invoice generator</h3>
-          </div>
-
-          <div class="panel-grid two-column">
-            <form id="invoiceForm" class="form-panel">
-              <label>
-                Customer name
-                <input type="text" name="customerName" placeholder="e.g. Zuri Traders" />
-              </label>
-
-              <label>
-                Item name
-                <input type="text" name="itemName" placeholder="e.g. Premium Setup" />
-              </label>
-
-              <div class="inline-fields">
-                <label>
-                  Quantity
-                  <input type="number" name="quantity" value="1" min="1" />
-                </label>
-                <label>
-                  Unit price
-                  <input type="number" name="unitPrice" value="2500" min="0" />
-                </label>
-              </div>
-
-              <div class="button-row">
-                <button type="submit" class="primary-button">Add item</button>
-                <button type="button" id="generateInvoice" class="secondary-button">Generate invoice</button>
-              </div>
-            </form>
-
-            <div class="output-panel invoice-panel">
-              <div class="invoice-header">
-                <div>
-                  <p class="muted-label">Invoice</p>
-                  <h4 id="invoiceTitle">OLAM AI BUSINESS ASSISTANT</h4>
-                </div>
-                <div class="invoice-meta">
-                  <span>Due: <strong id="invoiceDueDate">30 days</strong></span>
-                </div>
-              </div>
-
-              <div id="invoiceItems" class="invoice-items"></div>
-
-              <div class="invoice-total">
-                <span>Subtotal</span>
-                <strong id="subtotalAmount">₦0</strong>
-              </div>
-              <div class="invoice-total">
-                <span>VAT (7.5%)</span>
-                <strong id="vatAmount">₦0</strong>
-              </div>
-              <div class="invoice-total grand">
-                <span>Total</span>
-                <strong id="totalAmount">₦0</strong>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="receipt-generator" class="tool-panel compact">
-          <div class="section-heading left">
-            <p class="section-tag">Receipt</p>
-            <h3>Receipt generator</h3>
-          </div>
-
-          <div class="receipt-box" id="receiptBox">
-            <div class="receipt-top">
-              <div>
-                <strong>OLAM AI BUSINESS ASSISTANT</strong>
-                <p>Payment details</p>
-              </div>
-              <span>Receipt</span>
-            </div>
-            <div class="receipt-row">
-              <span>Customer</span>
-              <strong>Premium Retail Client</strong>
-            </div>
-            <div class="receipt-row">
-              <span>Paid</span>
-              <strong>₦0</strong>
-            </div>
-            <div class="receipt-row">
-              <span>Method</span>
-              <strong>Bank transfer</strong>
-            </div>
-            <button type="button" id="generateReceipt" class="primary-button">Generate receipt</button>
-          </div>
-        </section>
-
-        <section id="ad-generator" class="tool-panel">
-          <div class="section-heading left">
-            <p class="section-tag">Marketing</p>
-            <h3>AI advertisement generator</h3>
-          </div>
-
-          <div class="panel-grid two-column">
-            <form id="adForm" class="form-panel">
-              <label>
-                Product or service
-                <input type="text" name="adProduct" placeholder="e.g. Smart Growth Kit" />
-              </label>
-
-              <label>
-                Audience
-                <input type="text" name="audience" placeholder="e.g. SMEs and startups" />
-              </label>
-
-              <label>
-                Campaign tone
-                <select name="tone">
-                  <option value="Premium">Premium</option>
-                  <option value="Bold">Bold</option>
-                  <option value="Trust-building">Trust-building</option>
-                  <option value="Urgent">Urgent</option>
-                </select>
-              </label>
-
-              <button type="submit" class="primary-button full">Generate ad</button>
-            </form>
-
-            <div id="adOutput" class="output-panel ad-output">
-              <h4>Campaign copy</h4>
-              <p>
-                Launch your growth with our premium business toolkit. Built for ambitious teams that
-                want faster operations, better customer service, and smarter sales results.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="finance-manager" class="tool-panel">
-          <div class="section-heading left">
-            <p class="section-tag">Finance</p>
-            <h3>Sales & expense manager</h3>
-          </div>
-
-          <div class="panel-grid two-column">
-            <form id="transactionForm" class="form-panel">
-              <label>
-                Entry type
-                <select name="entryType">
-                  <option value="sale">Sale</option>
-                  <option value="expense">Expense</option>
-                </select>
-              </label>
-
-              <label>
-                Title
-                <input type="text" name="title" placeholder="e.g. Product sale" />
-              </label>
-
-              <label>
-                Category
-                <input type="text" name="category" placeholder="e.g. Marketing" />
-              </label>
-
-              <label>
-                Amount (₦)
-                <input type="number" name="amount" value="50000" min="0" />
-              </label>
-
-              <button type="submit" class="primary-button full">Add transaction</button>
-            </form>
-
-            <div class="output-panel finance-panel">
-              <div class="finance-summary">
-                <div>
-                  <span>Sales</span>
-                  <strong id="financeSales">₦0</strong>
-                </div>
-                <div>
-                  <span>Expenses</span>
-                  <strong id="financeExpenses">₦0</strong>
-                </div>
-                <div>
-                  <span>Profit</span>
-                  <strong id="financeProfit">₦0</strong>
-                </div>
-              </div>
-
-              <table>
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Title</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
-                <tbody id="transactionTableBody"></tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section id="products" class="tool-panel">
-          <div class="section-heading left">
-            <p class="section-tag">Storefront</p>
-            <h3>Product catalogue</h3>
-          </div>
-
-          <div class="catalog-controls" aria-label="Product filter controls">
-            <button class="filter-chip active" data-filter="all" type="button">All</button>
-            <button class="filter-chip" data-filter="electronics" type="button">Electronics</button>
-            <button class="filter-chip" data-filter="groceries" type="button">Groceries</button>
-            <button class="filter-chip" data-filter="promo" type="button">Promos</button>
-          </div>
-
-          <div id="catalogGrid" class="catalog-grid"></div>
-        </section>
-
-        <section id="support" class="tool-panel support-panel">
-          <div class="section-heading left">
-            <p class="section-tag">Support</p>
-            <h3>WhatsApp customer support</h3>
-          </div>
-
-          <div class="support-box">
-            <div>
-              <p class="muted-label">Opt-in support</p>
-              <h4>Live assistance for buyers, sellers, and partners</h4>
-            </div>
-            <div class="support-links">
-              <a class="primary-button" href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20need%20support%20for%20my%20business%20dashboard." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
-              <a class="secondary-button" href="mailto:olalekanb817@gmail.com">Email support</a>
-            </div>
-          </div>
-        </section>
-      </main>
+    <div class="topbar">
+      <div class="container">
+        <div>One World. Your Vision.</div>
+        <div>Lagos, Nigeria</div>
+      </div>
     </div>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/2348025592137?text=Hello%20OLAMILEKAN%20GLOBAL%20WORLD%2C%20I%20would%20like%20to%20ask%20about%20the%20business%20assistant."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Chat with OLAMILEKAN GLOBAL WORLD on WhatsApp"
-    >
-      WhatsApp
-    </a>
+    <header>
+      <div class="container nav-wrap">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+
+        <a href="index.html" class="brand">
+          <div class="logo-box">
+            <svg width="30" height="30" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="OGWI logo">
+              <circle cx="60" cy="60" r="42" fill="none" stroke="#ffffff" stroke-width="6"/>
+              <path d="M18 60H102M60 18V102M28 28C36 42 41 50 60 60C79 70 84 78 92 92" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+              <path d="M46 78L60 52L74 78" fill="none" stroke="#F3A31A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M60 52V80" fill="none" stroke="#F3A31A" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="60" cy="60" r="7" fill="#F3A31A"/>
+            </svg>
+          </div>
+          <span>OLAMILEKAN GLOBAL WORLD INVESTMENT</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Solutions</a>
+          <a href="#mission">Mission</a>
+          <a href="#values">Values</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="nav-cta">Partner With Us</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Global Business Growth</div>
+            <h1>Connecting Africa to the World.</h1>
+            <p class="lead">
+              OLAMILEKAN GLOBAL WORLD INVESTMENT connects commerce, technology, logistics, and investment opportunities
+              across Africa and the world—helping businesses scale with clarity, trusted strategy, and lasting value.
+            </p>
+
+            <div class="actions">
+              <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+              <a href="services.html" class="btn btn-secondary">Explore Solutions</a>
+            </div>
+
+            <div class="stats">
+              <div>
+                <strong>Trade</strong>
+                <span>Cross-border growth</span>
+              </div>
+              <div>
+                <strong>Logistics</strong>
+                <span>Operational support</span>
+              </div>
+              <div>
+                <strong>Investment</strong>
+                <span>Strategic opportunity</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="card-row">
+              <h3>Cross-Border Trade</h3>
+              <p>Connecting markets, buyers, suppliers, and financing partners across regions.</p>
+            </div>
+
+            <div class="card-row">
+              <h3>Strategic Investment</h3>
+              <p>Identifying high-potential opportunities that create sustainable long-term value.</p>
+            </div>
+
+            <div class="card-row">
+              <h3>Logistics &amp; Growth Support</h3>
+              <p>Operational support for moving goods, capital, and growth opportunities efficiently.</p>
+            </div>
+
+            <div class="live">
+              <span class="dot"></span>
+              <span>Active global engagement</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="eyebrow">About Us</div>
+            <h2>Built for business momentum.</h2>
+            <p>We support enterprises, investors, and entrepreneurs with strategic insight, practical execution, and future-focused growth.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="panel">
+              <h3>Who we are</h3>
+              <p>
+                OLAMILEKAN GLOBAL WORLD INVESTMENT is a growth-focused company created to support international trade,
+                business development, technology, logistics, and strategic investments across emerging and global markets.
+                We help businesses move from opportunity into impact with confidence.
+              </p>
+
+              <div class="feature-list">
+                <div class="feature">
+                  <span class="check">✓</span>
+                  <span>Commercial strategy</span>
+                </div>
+                <div class="feature">
+                  <span class="check">✓</span>
+                  <span>Cross-border partnerships</span>
+                </div>
+                <div class="feature">
+                  <span class="check">✓</span>
+                  <span>Investment advisory</span>
+                </div>
+                <div class="feature">
+                  <span class="check">✓</span>
+                  <span>Operational support</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Our approach</h3>
+              <div class="mission-boxes">
+                <div class="mission-box">
+                  <h4>Insight</h4>
+                  <p>We study markets and identify real opportunities before committing to scale.</p>
+                </div>
+                <div class="mission-box">
+                  <h4>Partnership</h4>
+                  <p>We connect the right people, businesses, and stakeholders for stronger outcomes.</p>
+                </div>
+                <div class="mission-box">
+                  <h4>Execution</h4>
+                  <p>We turn strategy into action through practical systems and disciplined delivery.</p>
+                </div>
+                <div class="mission-box">
+                  <h4>Impact</h4>
+                  <p>We prioritize business value, sustainability, and long-term opportunity.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <div class="section-header">
+            <div class="eyebrow">Our Divisions</div>
+            <h2>Three strategic engines.</h2>
+            <p>We operate across commerce, logistics, and technology to deliver integrated business growth.</p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="icon">🛒</div>
+              <h3>Supermarket &amp; Commerce</h3>
+              <p>Supporting retail operations, product supply, and commercial expansion for everyday growth.</p>
+            </div>
+
+            <div class="service-card">
+              <div class="icon">💻</div>
+              <h3>Technology &amp; Innovation</h3>
+              <p>Helping businesses adopt digital systems, strategic tools, and smarter operational models.</p>
+            </div>
+
+            <div class="service-card">
+              <div class="icon">🚚</div>
+              <h3>Logistics &amp; Supply</h3>
+              <p>Driving efficient movement of goods and operational continuity through reliable coordination.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mission" class="values">
+        <div class="container">
+          <div class="section-header">
+            <div class="eyebrow">Mission</div>
+            <h2>Driving prosperity through smart connection.</h2>
+            <p>Our mission is to empower businesses and communities by linking opportunity, expertise, and execution.</p>
+          </div>
+
+          <div class="value-grid">
+            <div class="value-card">
+              <div class="emoji">🤝</div>
+              <h4>Partnership</h4>
+              <p>We create trusted networks that support sustainable growth and collaboration.</p>
+            </div>
+            <div class="value-card">
+              <div class="emoji">📈</div>
+              <h4>Growth</h4>
+              <p>We unlock opportunities that strengthen business value and expansion potential.</p>
+            </div>
+            <div class="value-card">
+              <div class="emoji">🧠</div>
+              <h4>Innovation</h4>
+              <p>We integrate technology, planning, and strategic thinking for smarter execution.</p>
+            </div>
+            <div class="value-card">
+              <div class="emoji">✅</div>
+              <h4>Trust</h4>
+              <p>We lead with accountability, integrity, and a long-term business perspective.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="values">
+        <div class="container">
+          <div class="section-header">
+            <div class="eyebrow">Founder</div>
+            <h2>Leadership with vision.</h2>
+            <p>Our leadership is shaped by a strong commitment to growth, integrity, and long-term value creation.</p>
+          </div>
+
+          <div class="story-grid">
+            <div class="story-box">
+              <h3>Bello Ashimiu Olalekan</h3>
+              <p>
+                Bello Ashimiu Olalekan is the founder of OLAMILEKAN GLOBAL WORLD INVESTMENT, a visionary leader focused on connecting
+                commercial opportunity, logistics, technology, and strategic growth across multiple markets.
+              </p>
+              <p>
+                Under his leadership, the company continues to grow through trust-based partnerships and disciplined execution.
+              </p>
+            </div>
+
+            <div class="founder-box">
+              <h4>Leadership &amp; Vision</h4>
+              <p>
+                Our leadership philosophy is grounded in responsibility, strategic foresight, and a commitment to helping partners
+                move from opportunity into measurable progress.
+              </p>
+              <p>
+                We are building long-term business value with global perspective and practical local understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="container">
+          <div class="cta-box">
+            <div>
+              <h3>Let’s build the next chapter together.</h3>
+              <p>Partner with OLAMILEKAN GLOBAL WORLD INVESTMENT to unlock smarter business growth, trade opportunities, and long-term value.</p>
+            </div>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-primary">Contact Us</a>
+              <a href="https://wa.me/2348025592137" target="_blank" rel="noopener" class="btn btn-secondary">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 OLAMILEKAN GLOBAL WORLD INVESTMENT. All rights reserved.
+    </footer>
 
     <script src="script.js"></script>
   </body>
